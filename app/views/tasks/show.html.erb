@@ -1,0 +1,13 @@
+<div class = "container" >
+  <div class = "d-flex justify-content-between ">
+    <h1><%= @task.title %></h1>
+    <button class = "btn btn-outline-secondary" ><%= link_to "Edit this task", edit_path %></button>
+  </div>
+    <p><%= @task.details %><p>
+    <p><% if @task.completed == true %><p>
+    <p><%= "This task is completed" %><p>
+    <p><% else %><p>
+    <p><%= "This task is not completed yet" %><p>
+    <p><% end %><p>
+    <%= link_to "Back to list", tasks_path %>
+</div>
